@@ -21,9 +21,9 @@
 							echo(list_pages());
 						?> 
 							| 
-							<a href="<?php echo(rootpath()) ?>/contact.php">Contact Us</a>
+							<a href="<?php echo(rootpath()) ?>/contact.php">Liên hệ</a>
 						<?php } else { ?>
-						<a href="<?php echo(rootpath()) ?>/contact.php">Contact Us</a>
+						<a href="<?php echo(rootpath()) ?>/contact.php">Liên hệ</a>
 						<?php } ?>
 						</h4>
 							<div style="clear:both"></div>
@@ -32,7 +32,7 @@
 									<?php echo(get_title()) ?>
 								</b> 
 							</a></li>
-                    <b>Shared On NullPHP.com </b><a href="http://www.nullphp.com" target="_blank"><b>NullPHP.com</b></a>
+                    <b>Copyright by Choinet.net </b><a href="http://www.choinet.net" target="_blank"><b>choinet.net</b></a>
 				</div>
 		</div>
 	</body>

@@ -1,6 +1,6 @@
 <?php
 /**
- * Script para la generación de CAPTCHAS
+ * Script para la generaciï¿½n de CAPTCHAS
  *
  * @author  Jose Rodriguez <jose.rodriguez@exec.cl>
  * @license GPLv3
@@ -59,7 +59,7 @@ class SimpleCaptcha {
 
     /**
      * Max word length (for non-dictionary random text generation)
-     * 
+     *
      * Used for dictionary words indicating the word-length
      * for font-size modification purposes
      */
@@ -111,7 +111,7 @@ class SimpleCaptcha {
      */
     public $scale = 3;
 
-    /** 
+    /**
      * Blur effect for better image quality (but slower image processing).
      * Better image results with scale=3
      */
@@ -119,7 +119,7 @@ class SimpleCaptcha {
 
     /** Debug? */
     public $debug = false;
-    
+
     /** Image format: jpeg or png */
     public $imageFormat = 'png';
 
@@ -150,7 +150,7 @@ class SimpleCaptcha {
 
         /** Initialization */
         $this->ImageAllocate();
-        
+
         /** Text insertion */
         $text = $this->GetCaptchaText();
         $fontcfg  = $this->fonts[0];
@@ -427,7 +427,7 @@ class SimpleCaptcha {
      * Reduce the image to the final size
      */
     protected function ReduceImage() {
-        // Reduzco el tamaño de la imagen
+        // Reduzco el tamaï¿½o de la imagen
         $imResampled = imagecreatetruecolor($this->width, $this->height);
         imagecopyresampled($imResampled, $this->im,
             0, 0, 0, 0,

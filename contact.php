@@ -37,37 +37,37 @@ include "inc/header_under.php";
 		<div class="nexthon-soft-box static">
             <div class="content contact-container contact-wrapper">
                 <form name="submitcontact" class="modal" action="./contact.php" method="POST">
-                    <h3>Contact Us</h3>
+                    <h3>Liên hệ</h3>
                     <div id="refresh"></div>
                     <div class="field">
                         <label>
-                        	<h4>Your Name</h4>
+                        	<h4>Họ tên</h4>
                         	<input type="text" class="text" name="name" value="<?php echo($_POST['name']) ?>"/>
                         </label>
 						<?php
 							if(isset($_POST['name']) && trim($_POST['name'])!="" && !isalpha($_POST['name']))
-							echo('<h4>&nbsp;</h4><p class="errormsg">Name must be Alphanumeric.</p>');
+							echo('<h4>&nbsp;</h4><p class="errormsg">Tên phải là ký tự.</p>');
 							else if(isset($_POST['name']) && trim($_POST['name'])=="")
-							echo('<h4>&nbsp;</h4><p class="errormsg">Name Field must not be empty.</p>');
+							echo('<h4>&nbsp;</h4><p class="errormsg">Tên không được để trống.</p>');
 						?>
                     </div>                       
 					<div class="field">
                         <label>
-                        	<h4>Your Email</h4>
+                        	<h4>Email</h4>
                         	<input type="text" class="text" name="email" value="<?php echo($_POST['email']) ?>"/>
                         </label>
 						<?php
 							if(isset($_POST['email']) && trim($_POST['email'])!="" && !checkEmail($_POST['email']))
-							echo('<h4>&nbsp;</h4><p class="errormsg">Name must be Alphanumeric.</p>');
+							echo('<h4>&nbsp;</h4><p class="errormsg">Email phải là ký tự.</p>');
 							else if(isset($_POST['email']) && trim($_POST['email'])=="")
-							echo('<h4>&nbsp;</h4><p class="errormsg">Email must not be empty.</p>');
+							echo('<h4>&nbsp;</h4><p class="errormsg">Email không được để trống.</p>');
 							?>
                     </div>   					
                     <div class="field">
                         <label>
                         	<h4>Details</h4>
 							<?php if(isset($_GET['report']) && valid_url(trim('http://' . getdomain($_GET['report'])))) {
-								$details = "Hello Admin,&#13;&#13;I want to report this media on your website : " . trim($_GET['report']) . " and the reason why i am doing this is (State your reason here)&#13;&#13;Regards&#13;Your Name"; } else { $details=$_POST['details']; } ?>
+								$details = "Xin chào Admin,&#13;&#13;Tôi muốn báo cáo nội dung này trên site của bạn : " . trim($_GET['report']) . " và đây là lý do mà tôi làm vậy (Lý do báo cáo ở đây)&#13;&#13;Regards&#13;Tên bạn"; } else { $details=$_POST['details']; } ?>
                         	<textarea name="details"><?php echo($details) ?></textarea>
                         </label>
                     </div>
@@ -75,7 +75,7 @@ include "inc/header_under.php";
 					{ ?>
                     <div class="field">
                         <label>
-                        	<h4>Captcha</h4>
+                        	<h4>Mã xác nhận</h4>
                             <img src="./libs/captcha/captcha.php" id="captcha" />
 							<a onclick="document.getElementById('captcha').src='./libs/captcha/captcha.php?'+Math.random();$(this).focus();" id="change-image"><img src="images/refresh.png" title="Refresh image"/></a>                    
 					   </label>
@@ -83,14 +83,14 @@ include "inc/header_under.php";
 					<div class="field">
                         <label>
                         	<h4>&nbsp;</h4>
-							<input type="text" class="text" style="width: auto;" name="imagecode" value="" maxlength="5" placeholder="Enter Image code here from above."/>
+							<input type="text" class="text" style="width: auto;" name="imagecode" value="" maxlength="5" placeholder="Nhập mã xác nhận vào ô bên dưới."/>
                         </label>
 						<?php
 							if(isset($_POST['imagecode']))
 							{
 								if(empty($_SESSION['captcha']) || (trim(strtolower($_POST['imagecode'])) != $_SESSION['captcha']))
 								{
-									echo('<h4>&nbsp;</h4><p class="errormsg">Invalid Code.</p>');
+									echo('<h4>&nbsp;</h4><p class="errormsg">Mã không hợp lệ.</p>');
 								}
 							}
 						?>                   
@@ -104,7 +104,7 @@ include "inc/header_under.php";
             </div>
 			<div class="actions">
             	<ul class="buttons">
-            		<li><a class="button" onclick="document.submitcontact.submit();">Submit</a></li>
+            		<li><a class="button" onclick="document.submitcontact.submit();">Gủi</a></li>
             	</ul>
             </div>
 		</div>
