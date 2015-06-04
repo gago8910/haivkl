@@ -1,0 +1,26 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+Options -Multiviews
+RewriteCond %{SCRIPT_FILENAME} !-d  
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteRule ^all/(.*)$ ./index.php?page=$1 [L]
+RewriteRule ^picture/(.*)$ ./post.php?pic=$1 [L]
+RewriteRule ^gif/(.*)$ ./post.php?gif=$1 [L]
+RewriteRule ^video/(.*)$ ./post.php?vid=$1 [L]
+RewriteRule ^pictures$ ./pictures.php [L]
+RewriteRule ^pictures/(.*)$ ./pictures.php?page=$1 [L]
+RewriteRule ^animated-gifs$ ./animated-gifs.php [L]
+RewriteRule ^animated-gifs/(.*)$ ./animated-gifs.php?page=$1 [L]
+RewriteRule ^videos$ ./videos.php [L]
+RewriteRule ^videos/(.*)$ ./videos.php?page=$1 [L]
+RewriteRule ^search/(.*)/(.*)/(.*)$ ./search.php?type=$1&q=$2&page=$3 [L]
+RewriteRule ^search/(.*)/(.*)$ ./search.php?type=$1&q=$2 [L]
+RewriteRule ^page/(.*)$ ./page.php?permalink=$1 [L]
+RewriteRule ^rss/tag/(.*)/(.*)$ ./rss.php?tag=$2&type=$1 [L]
+RewriteRule ^rss/tag/(.*)$ ./rss.php?tag=$1 [L]
+RewriteRule ^rss/(.*)$ ./rss.php?mtype=$1 [L]
+RewriteRule ^rss$ ./rss.php
+RewriteRule ^tags/(.*)/(.*)$ ./tags.php?tag=$2&type=$1 [L]
+RewriteRule ^tags/(.*)$ ./tags.php?tag=$1 [L]
+ErrorDocument 404 /404.php
+</IfModule>

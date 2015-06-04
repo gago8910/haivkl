@@ -1,0 +1,43 @@
+.nexthon-bar {
+    background-color: #000;
+    padding: 10px 0;
+    width: 100%;
+    margin-top:  50px;
+    margin-bottom:  -160px;
+}
+.nexthon-bar ul {
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    width: 1060px;
+}
+.nexthon-bar ul a {
+    float: left;
+    margin: 0;
+    position: relative;
+    width: 142px;
+    height: 100px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.nexthon-bar ul a:last-child {
+    margin-right: 0;
+}
+.nexthon-bar ul a img, .nexthon-bar ul a span.title {
+    display: block;
+}
+.nexthon-bar ul a span.title {
+    background-color: rgba(25, 25, 25, 0.9);
+	color: rgba(255, 255, 255, 1);
+	bottom: 0px;
+	left: 0px;
+	font-size: 10px;
+	font-weight: bold;
+	padding: 2px 6px;
+	position: absolute;
+	width: 100%;
+}
+.nexthon-bar ul a:hover span.title {
+    display: block;
+}

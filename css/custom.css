@@ -1,0 +1,108 @@
+.errormsg
+{
+color:red;
+font-size:x-small;
+}
+#views {
+    background: url("../images/sprite_v12.png") no-repeat scroll -11px -61px transparent;
+    padding-left: 14px;
+}
+#title_m {
+	background-color: rgba(25, 25, 25, 0.9);
+	color: rgba(255, 255, 255, 1);
+	bottom: 0px;
+	left: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 5px 0px;
+	position: absolute;
+	width: 100%;
+}
+
+#sort {
+	padding-top: 10px;
+	text-align: right;
+	padding-right: 15px;
+}
+
+#sort a img {
+	margin-bottom: -2px;
+	height: 14px;
+	width: 12px;
+}
+
+#sort select {
+    padding:3px;
+    margin: 0;
+	width:65px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    background: #fff;
+    color:#888;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+}
+
+/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+   
+}
+
+#sort label {position:relative}
+#sort label:after {
+    content:'<>';
+    font:11px "Consolas", monospace;
+    color:#aaa;
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform:rotate(90deg);
+    right:8px; top:-4px;
+    padding:0 0 2px;
+    border-bottom:1px solid #ddd;
+    position:absolute;
+    pointer-events:none;
+}
+#sort label:before {
+    content:'';
+    margin-top: -6px;
+    right:6px; top:0px;
+    width:20px; height:22px;
+    background:#fff;
+    position:absolute;
+    pointer-events:none;
+    display:block;
+}
+.buttons_p_n {
+    position: relative;
+    margin: 0px 0px 0px -20px;
+    top: 220px;
+    width: 781px;
+    z-index: 1;
+    float: left;
+    height: 0px;
+}
+.prev_p {
+    background: url("../images/button_left.png") repeat scroll 0% 0% transparent;
+    float: left;
+    width: 55px;
+    height: 57px;
+}
+.prev_p:active {
+    margin-top: 5px;
+}
+.next_p {
+    background: url("../images/button_right.png") repeat scroll -55px 0px transparent;
+    float: right;
+    width: 55px;
+    height: 57px;
+}
+.next_p:active {
+    margin-top: 5px;
+}

@@ -1,0 +1,4 @@
+[31-Aug-2013 08:04:46 America/New_York] PHP Fatal error:  PHP Startup: apc_mmap: mmap failed: in Unknown on line 0
+[31-Aug-2013 08:16:27 America/New_York] PHP Fatal error:  PHP Startup: apc_mmap: mmap failed: in Unknown on line 0
+[06-Sep-2013 03:58:38 America/New_York] PHP Fatal error:  PHP Startup: apc_mmap: mmap failed: in Unknown on line 0
+[11-Sep-2013 17:25:22 America/New_York] PHP Fatal error:  PHP Startup: apc_mmap: mmap failed: in Unknown on line 0
