@@ -91,7 +91,7 @@ include "inc/header_under.php";
         <div class="main-filter ">
             <ul class="content-type">
                 <?php if ((allow_pictures()) || (allow_videos()) || (allow_gifs())) { ?>
-                    <li><a class="current" href="<?php echo(rootpath()) ?>"><strong>All</strong></a></li>
+                    <li><a class="current" href="<?php echo(rootpath()) ?>"><strong>Tất cả</strong></a></li>
                     <?php if (rss_enable()) { ?>
                         <li><a class="link" href="<?php echo(rootpath()) ?>/rss"
                                style="padding-left: 8px; padding-right: 11px;"><img
@@ -101,18 +101,18 @@ include "inc/header_under.php";
                 }
                 if (allow_pictures()) {
                     ?>
-                    <li><a class="" href="<?php echo(rootpath()) ?>/pictures"><strong>Pictures</strong></a></li>
+                    <li><a class="" href="<?php echo(rootpath()) ?>/pictures"><strong>Ảnh mới</strong></a></li>
                 <?php
                 }
                 if (allow_gifs()) {
                     ?>
-                    <li><a class="" href="<?php echo(rootpath()) ?>/animated-gifs"><strong>Animated GIFs</strong></a>
+                    <li><a class="" href="<?php echo(rootpath()) ?>/animated-gifs"><strong>GIF</strong></a>
                     </li>
                 <?php
                 }
                 if (allow_videos()) {
                     ?>
-                    <li><a class="" href="<?php echo(rootpath()) ?>/videos"><strong>Videos</strong></a></li>
+                    <li><a class="" href="<?php echo(rootpath()) ?>/videos"><strong>Video</strong></a></li>
                 <?php } ?>
             </ul>
             <div id="sort">
@@ -121,33 +121,33 @@ include "inc/header_under.php";
                     <select
                         onchange="self.location=self.location='<?php echo(rootpath()) ?>/index.php?sort_by='+this.options[this.selectedIndex].value">
                         <?php if ($_SESSION['sort_by'] == "date") { ?>
-                            <option value="orderid" selected>Date</option>
-                            <option value="votes">Likes</option>
-                            <option value="views">Views</option>
+                            <option value="orderid" selected>Ngày đăng</option>
+                            <option value="votes">Lượt thích</option>
+                            <option value="views">Xem</option>
                         <?php } else if ($_SESSION['sort_by'] == "likes") { ?>
-                            <option value="orderid">Date</option>
-                            <option value="votes" selected>Likes</option>
-                            <option value="views">Views</option>
+                            <option value="orderid">Ngày đăng</option>
+                            <option value="votes" selected>Lượt thích</option>
+                            <option value="views">Lượt xem</option>
                         <?php } else if ($_SESSION['sort_by'] == "views") { ?>
-                            <option value="orderid">Date</option>
-                            <option value="votes">Likes</option>
-                            <option value="views" selected>Views</option>
+                            <option value="orderid">Ngày đăng</option>
+                            <option value="votes">Lượt xem</option>
+                            <option value="views" selected>Lượt thích</option>
                         <?php } else { ?>
-                            <option value="orderid" selected>Date</option>
-                            <option value="votes">Likes</option>
-                            <option value="views">Views</option>
+                            <option value="orderid" selected>Ngày đăng</option>
+                            <option value="votes">Lượt thích</option>
+                            <option value="views">Lượt xem</option>
                         <?php } ?>
                     </select>
                 </label>​
                 <?php if ($_SESSION['sort_order'] == "ASC") { ?>
                     <a href="<?php echo(rootpath()) ?>/index.php?sort_order=DESC"><img
-                            src="<?php echo(rootpath()) ?>/images/arrow_up.png" title="Ascending"></a>
+                            src="<?php echo(rootpath()) ?>/images/arrow_up.png" title="Tăng dần"></a>
                 <?php } else if ($_SESSION['sort_order'] == "DESC") { ?>
                     <a href="<?php echo(rootpath()) ?>/index.php?sort_order=ASC"><img
-                            src="<?php echo(rootpath()) ?>/images/arrow_down.png" title="Descending"></a>
+                            src="<?php echo(rootpath()) ?>/images/arrow_down.png" title="Giảm dần"></a>
                 <? } else { ?>
                     <a href="<?php echo(rootpath()) ?>/index.php?sort_order=DESC"><img
-                            src="<?php echo(rootpath()) ?>/images/arrow_up.png" title="Ascending"></a>
+                            src="<?php echo(rootpath()) ?>/images/arrow_up.png" title="Tăng dần"></a>
                 <?php } ?>
             </div>
         </div>
@@ -244,7 +244,7 @@ include "inc/header_under.php";
                     </p>
 
                     <p class="error" style="padding-bottom: 100px;">
-                        Sorry ! No Media found to display :(
+                        Xin lỗi, không có ảnh hoặc video nào được tìm thấy. Hãy đăng nhập để up video ngay bạn ơi :)
                     </p>
 
                 </div>

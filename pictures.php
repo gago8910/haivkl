@@ -64,16 +64,16 @@ if (!isset($_SESSION)) session_start();
         <div class="main-filter ">
             <ul class="content-type">
 					<?php if((allow_pictures()) || (allow_videos()) || (allow_gifs())) { ?>	
-					<li><a  href="<?php echo(rootpath()) ?>"><strong>All</strong></a></li>
+					<li><a  href="<?php echo(rootpath()) ?>"><strong>Tất cả</strong></a></li>
 					<?php } if(allow_pictures()) { ?>	
-						<li> <a class="current" href="<?php echo(rootpath()) ?>/pictures"><strong>Pictures </strong></a></li>
+						<li> <a class="current" href="<?php echo(rootpath()) ?>/pictures"><strong>Ảnh mới</strong></a></li>
 						<?php if(rss_enable() && rss_cat_enable()) { ?>
 							<li><a class="" href="<?php echo(rootpath()) ?>/rss/pictures" style="padding-left: 8px; padding-right: 11px;"><img src="<?php echo(rootpath()) ?>/images/rss_icon.png"  /></a></li>
 						<?php } ?>
 					<?php } if(allow_gifs()) { ?>
-						<li> <a class="" href="<?php echo(rootpath()) ?>/animated-gifs"><strong>Animated GIFs</strong></a></li>
+						<li> <a class="" href="<?php echo(rootpath()) ?>/animated-gifs"><strong>GIF</strong></a></li>
 					<?php } if(allow_videos()) { ?>
-						<li> <a class="" href="<?php echo(rootpath()) ?>/videos"><strong>Videos</strong></a></li> 
+						<li> <a class="" href="<?php echo(rootpath()) ?>/videos"><strong>Video</strong></a></li>
 					<?php }?>
             </ul>
 			
@@ -83,30 +83,30 @@ if (!isset($_SESSION)) session_start();
 					<strong>Sort by : </strong>
 					<select onchange="self.location=self.location='<?php echo(rootpath()) ?>/pictures.php?sort_by='+this.options[this.selectedIndex].value">
 						<?php if($_SESSION['sort_by']=="date") { ?>
-						<option value="orderid" selected>Date</option>
-						<option value="votes">Likes</option>
-						<option value="views">Views</option>
+						<option value="orderid" selected>Ngày đăng</option>
+						<option value="votes">Lượt thích</option>
+						<option value="views">Lượt xem</option>
 						<?php } else if($_SESSION['sort_by']=="likes") { ?>
-						<option value="orderid">Date</option>
-						<option value="votes" selected>Likes</option>
-						<option value="views">Views</option>
+						<option value="orderid">Ngày đăng</option>
+						<option value="votes" selected>Lượt thích</option>
+						<option value="views">Lượt xem</option>
 						<?php } else if($_SESSION['sort_by']=="views") { ?>
-						<option value="orderid">Date</option>
-						<option value="votes">Likes</option>
-						<option value="views" selected>Views</option>
+						<option value="orderid">Ngày đăng</option>
+						<option value="votes">Lượt thích</option>
+						<option value="views" selected>Lượt xem</option>
 						<?php } else { ?>
-						<option value="orderid" selected>Date</option>
-						<option value="votes">Likes</option>
-						<option value="views">Views</option>
+						<option value="orderid" selected>Ngày đăng</option>
+						<option value="votes">Lượt thích</option>
+						<option value="views">Lượt xem</option>
 						<?php } ?>
 					</select>
 				</label>​
 				<?php if($_SESSION['sort_order']=="ASC") { ?>
-				<a href="<?php echo(rootpath()) ?>/pictures.php?sort_order=DESC"><img src="<?php echo(rootpath()) ?>/images/arrow_up.png" title="Ascending"></a>
+				<a href="<?php echo(rootpath()) ?>/pictures.php?sort_order=DESC"><img src="<?php echo(rootpath()) ?>/images/arrow_up.png" title="Tăng dần"></a>
 				<?php } else if($_SESSION['sort_order']=="DESC") { ?>
-				<a href="<?php echo(rootpath()) ?>/pictures.php?sort_order=ASC"><img src="<?php echo(rootpath()) ?>/images/arrow_down.png" title="Descending"></a>
+				<a href="<?php echo(rootpath()) ?>/pictures.php?sort_order=ASC"><img src="<?php echo(rootpath()) ?>/images/arrow_down.png" title="Giảm dần"></a>
 				<?php } else { ?>
-				<a href="<?php echo(rootpath()) ?>/pictures.php?sort_order=DESC"><img src="<?php echo(rootpath()) ?>/images/arrow_up.png" title="Ascending"></a>
+				<a href="<?php echo(rootpath()) ?>/pictures.php?sort_order=DESC"><img src="<?php echo(rootpath()) ?>/images/arrow_up.png" title="Tăng dần"></a>
 				<?php } ?>
 			</div>
         </div>
